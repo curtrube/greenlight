@@ -32,9 +32,6 @@ func (app *application) writeJSON(w http.ResponseWriter, status int, data any, h
 		return err
 	}
 
-	// Append a newline to make it easier to view in terminal applications.
-	js = append(js, '\n')
-
 	// At this point, we know that we won't encounter any more errors before writing the
 	// response, so it's safe to add any headers that we want to include. We loop
 	// through the headers map (which behind the scenes has the type map[string][]string)
